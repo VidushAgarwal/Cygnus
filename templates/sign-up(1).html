@@ -1,0 +1,28 @@
+<HTML>
+{% load staticfiles %}{% static "" as baseurl %}
+<HEAD>
+<TITLE>Sign-up(1)</TITLE>
+<BODY background="{% static 'mail/sign-up(1).jpg' %}" text=white align=justify>
+<link rel="stylesheet" href="{{baseurl}}qw.css">
+
+<form action="log" method='post'>
+{% csrf_token %}
+<CENTER>
+<B><FONT size=72 face="Old English Text MT" color=red><H1 align=center>CYGNUS</H1></FONT></B>
+<div class='wrapper'>
+<B><label><font face="Bradley Hand ITC" >FIRST NAME</label></B>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<INPUT type="text" size=40 name='first-name' font face="Bradley Hand ITC" /><BR><BR><BR>
+<B><label>LAST NAME</label></B>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<INPUT type="text" size=40 name='last-name' /><BR><BR><BR>
+<B><label>DATE OF BIRTH</label></B>&nbsp&nbsp<INPUT type="date" size=40 name='date' /><BR>{{err}}<BR><BR>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<BR>
+<B><label>EMAIL ID</label></B>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<INPUT type="text" size=40 name='email' /><BR>{{err2}}<BR><BR>
+<BR>
+<B><label>PASSWORD</label></B></font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<INPUT type="password" size=40 name='password' /><BR>{{err1}}<BR><BR>
+<BR>
+<form action="">
+<but><INPUT type="submit" value="SUBMIT"></but><BR>
+</form>
+</div>
+</CENTER>
+</BODY>
+</HEAD>
+</HTML>

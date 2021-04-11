@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>username</title>
+</head>
+{% load staticfiles %}{% static "" as baseurl %}
+<body background="{% static 'mail/login.jpg' %}" topmargin=80 leftmargin=80 text=lime >
+<link rel="stylesheet" href="{{baseurl}}qw.css">
+<center>
+
+<font face = "Old English Text MT" size=7 color=blue>
+<form action='log' method='post' autocomplete="off">
+{% csrf_token %}
+<b><h1>CYGNUS</h1><br><br></font>
+<div class='wrapper'>
+<font face="Bradley Hand ITC"><b>
+<h2>Please enter email details</h2><br><br>
+<label>EMAIL </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type=email size=40 , name='email' /><br>
+<br><br>
+<label>PASSWORD </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type=password size=40 , name='password' /></b><br>
+{{err1}}
+<br><br>
+<input type='submit' value='SUBMIT' />
+</form>
+</div>
+</font>
+</center>
+</body>
+</html>

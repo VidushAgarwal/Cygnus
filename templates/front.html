@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>frontpage</title>
+</head>
+{% load static %}{% static "" as baseurl %}
+<body background="{% static 'mail/qwe.jpg' %}" topmargin=50 leftmargin=80 text="yellow">
+<center>
+<link rel="stylesheet" href="{{baseurl}}qw.css">
+<font size=7 color=crimson face='Old English Text MT'>
+<b><h1>CYGNUS</h1><br>
+</font>
+<div class='wrapper'>
+<br>
+<font size=6 face="Bradley Hand ITC">
+WELCOME TO OUR MAIL SERVICE<br>
+<br><br>
+</font>
+<font face="Bradley Hand ITC" size=5>
+<label>EXISTING USER</label><br><br>
+<form action="abc" method='post'>
+{% csrf_token %}
+<input type='submit' value='SIGN-IN' name='SIGN-IN'>
+</form><hr color=black width=300>
+<br><label>DON'T HAVE AN ACCOUNT?</label><br><br>
+</font>
+<form action="abc" method='post'>
+{% csrf_token %}
+<input type='submit' value='SIGN-UP' name='SIGN-UP'>
+</form>
+</div>
+</center>
+</body>
+</html>

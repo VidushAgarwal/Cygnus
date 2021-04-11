@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Inbox</title>
+</head>
+{% load staticfiles %}{% static "" as baseurl %}
+<body background = "{% static 'mail/inbox.jpg' %}" text='white' size=4>
+<center>
+<link rel="stylesheet" href="{{baseurl}}qw.css">
+<div class='wrapper'>
+<h1><font face="Old English Text MT" ><label name='Inbox'>Inbox</label></font></h1>
+<table border>
+<form action='mail' method='post'>
+{% csrf_token %}
+<tr>
+<td><ol>
+{% for j in unread %}
+	<li><font face="Bradley Hand ITC" size='4'><label><I><b>{{j}}</b></I></label></font>
+{% endfor %}
+{% for i in read %}
+	<li><font face="Bradley Hand ITC" size='4'>{{i}}</font>
+{% endfor %}
+</ol></td>
+</tr>
+</table>
+<br>
+<br>
+Enter number of mail to open&nbsp&nbsp&nbsp<input type ="text" name="val"><br>
+<br><input type='submit' value='continue'><br>
+</form>
+</div><br>
+<form action = "home" method='post'>
+{% csrf_token %}
+<input type='submit' name='home' value='HOME'/>
+</form>
+</center>
+</body>
+</html>

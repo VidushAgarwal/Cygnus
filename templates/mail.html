@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>mail</title>
+</head>
+{% load staticfiles %}{% static "" as baseurl %}
+<link rel="stylesheet" href="{{baseurl}}qw.css">
+<body background = "{% static 'mail/message.jpg'  %}" text='white'>
+<center>
+<div class='wrapper'>
+<font face='Old English Text MT'>
+<h1>Message</h1></font>
+<br><br>
+{% for i in out %}
+	{{i}}<br>
+{% endfor %}
+<form action = "home" method='post'>
+{% csrf_token %}
+<input type='submit' name='' value='HOME'>
+</form>
+</div>
+</center>
+</body>
+</html>

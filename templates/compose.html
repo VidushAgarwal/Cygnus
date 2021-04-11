@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>compose</title>
+</head>
+{% load staticfiles %}{% static "" as baseurl %}
+<link rel="stylesheet" href="{{baseurl}}qw.css">
+<body background = "{% static 'mail/compose.jpg' %}" text='red'>
+<center><font face="Old English Text MT">
+<div class='wrapper'>
+<h1>COMPOSE</h1></font>
+<form action=write method='POST'>
+{% csrf_token %}
+Reciever&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type='text' name='reciever'><br>{{err}}<br><br><br><br><br>
+Message<br><textarea class ="scrollabletextbox" rows=10 cols=40 name='message' accesskey="." value=" "></textarea><br><br>
+<br>
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<br><br><but><input type='submit' name='compose' value='submit'></but><br><br>
+</form>
+</div>
+<br>
+<form action = "home" method='post'>
+{% csrf_token %}
+<input type='submit' name='home' value='HOME' />
+</form>
+
+</center>
+</body>
+</html>
