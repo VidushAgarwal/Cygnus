@@ -1,0 +1,121 @@
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+div{
+	font-family:"Bradley Hand ITC";
+	border-radius: 20px 20px 20px 20px;
+	background:black;
+	direction: rt1;
+	width: 400px;
+	padding:20px;
+	opacity:.6;
+}
+label{
+	width:100%;
+	color:gold;
+}
+input{
+	font-weight:bold;
+	font-family: "Bradley Hand ITC";
+	background:#87CEEB;
+	border-radius: 0 3em;
+	padding: 0 10px;
+	border: none;
+	color:black;
+	font-size:20;
+	width:80%;
+}
+input[type='submit']{
+	width:100;
+	height:30;
+	display:inline-block;
+	border-radius:10px;
+	background:green;
+	color:white;
+}
+input[value='compose']{
+	width:200;
+	height:80;
+	font-size:35;
+	display:inline-block;
+	border-radius:10px;
+	background:red;
+	color:yellow;
+	font-weight:bold;
+
+}
+input[value='inbox']{
+	height:80;
+	width:200;
+	font-size:35;
+	display:inline-block;
+	border-radius:10px;
+	background:yellow;
+	color:red;
+	font-weight:bold;
+}
+input[value='sent']{
+	width:200;
+	height:80;
+	font-size:35;
+	display:inline-block;
+	border-radius:10px;
+	background:lightblue;
+	color:black;
+	font-weight:bold;
+}
+input[value='logout']{
+	width:200;
+	height:80;
+	font-size:35;	
+	display:inline-block;
+	border-radius:10px;
+	background:black;
+	color:white;
+	align:right;
+	font-weight:bold;
+}
+input[name='home']{
+	width:120;
+	height:40;
+	display:inline-block;
+	border-radius:10px;
+	background:black;
+	color:white;
+}
+input[value='SIGN-UP']{
+	width:200;
+	height:50;
+	font-size:35;
+	display:inline-block;
+	border-radius:10px;
+	background:red;
+	color:yellow;
+	font-weight:bold;
+
+}
+input[value='SIGN-IN']{
+	height:50;
+	width:200;
+	font-size:35;
+	display:inline-block;
+	border-radius:10px;
+	background:yellow;
+	color:red;
+	font-weight:bold;
+}
+label[name='Inbox']{
+	font-size:80;
+}
+input[value='exit']{
+	width:200;
+	height:80;
+	font-size:35;	
+	display:inline-block;
+	border-radius:10px;
+	background:green;
+	color:blue;
+	align:right;
+	font-weight:bold;
+}
